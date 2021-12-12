@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Montserrat:ital@1&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+		<link rel='stylesheet' type="text/css" href="style.css">
+		<title>방구석 비대면 여행</title>
+		<script>
+			var sum=0;
+			function calc(cBox) {
+				if(cBox.checked)
+					sum += parseInt(cBox.value);
+				else
+					sum -= parseInt(cBox.value);
+				document.getElementById("sumtext").value = sum;
+			}
+
+			function sent(){
+				var sent =  confirm('이벤트 참여가 완료 되었습니다. 이벤트 당첨자는 12/12일 개별 문자 전송 예정입니다.');
+				return sent;
+			}
+
+			function changes() {
+				var span = document.getElementById("address");
+				span.innerHTML= "경기도 용인시 처인구 백옥대로 2402번길 31-22";
+			}
+
+		var files = ['./img/강원도1.jpeg', './img/강원도2.jpeg', './img/강원도3.jpeg','./img/강원도4.jpeg','./img/강원도5.jpeg','./img/강원도6.jpeg'];
+		var imgs = new Array();
+			for(var i=0; i<files.length; i++) {
+			imgs[i] = new Image(); // 이미지 객체 생성
+			imgs[i].src = files[i]; // 이미지 미리 로딩
+		}
+
+// 다음 이미지 출력
+		var next = 1;
+			function change(img) {
+			img.src = imgs[next].src; // 이미지 변경
+			next++; // 다음 이미지 인덱스
+			next %= imgs.length; // 개수를 넘으면 처음으로
+		}
+
+		var files2 = ['./img/경상도1.jpeg', './img/경상도2.jpeg', './img/경상도3.jpeg','./img/경상도4.jpeg','./img/경상도5.jpeg','./img/경상도6.jpeg'];
+		var imgs2 = new Array();
+			for(var i=0; i<files2.length; i++) {
+			imgs2[i] = new Image(); 
+			imgs2[i].src = files2[i];
+		}
+
+		var next2 = 1;
+			function change2(img) {
+			img.src = imgs2[next2].src; 
+			next2++; 
+			next2 %= imgs2.length; 
+		}
+
+		var files3 = ['./img/제주도1.jpeg', './img/제주도2.jpeg', './img/제주도3.jpeg','./img/제주도4.jpeg','./img/제주도5.jpeg', './img/제주도6.jpeg'];
+		var imgs3 = new Array();
+			for(var i=0; i<files3.length; i++) {
+			imgs3[i] = new Image(); 
+			imgs3[i].src = files3[i];
+		}
+
+		var next3 = 1;
+			function change3(img) {
+			img.src = imgs3[next3].src; 
+			next3++; 
+			next3 %= imgs3.length; 
+		}
+
+		var files4 = ['./img/전라도1.jpeg', './img/전라도2.jpeg', './img/전라도3.jpeg','./img/전라도4.jpeg','./img/전라도5.jpeg','./img/전라도6.jpeg'];
+		var imgs4 = new Array();
+			for(var i=0; i<files4.length; i++) {
+			imgs4[i] = new Image(); 
+			imgs4[i].src = files4[i];
+		}
+
+		var next4 = 1;
+			function change4(img) {
+			img.src = imgs4[next4].src; 
+			next4++; 
+			next4 %= imgs4.length; 
+		}	
+
+		var files5 = ['./img/충청도1.jpeg', './img/충청도2.jpeg', './img/충청도3.jpeg','./img/충청도4.jpeg','./img/충청도5.jpeg','./img/충청도6.jpeg'];
+		var imgs5 = new Array();
+			for(var i=0; i<files5.length; i++) {
+			imgs5[i] = new Image(); 
+			imgs5[i].src = files5[i];
+		}
+
+		var next5 = 1;
+			function change5(img) {
+			img.src = imgs5[next5].src; 
+			next5++; 
+			next5 %= imgs5.length; 
+		}	
+	
+		var files6 = ['./img/경기도1.jpeg', './img/경기도2.jpeg', './img/경기도3.jpeg','./img/경기도4.jpeg','./img/경기도5.jpeg','./img/경기도6.jpeg'];
+		var imgs6 = new Array();
+			for(var i=0; i<files6.length; i++) {
+			imgs6[i] = new Image(); 
+			imgs6[i].src = files6[i];
+		}
+
+		var next6 = 1;
+			function change6(img) {
+			img.src = imgs6[next6].src; 
+			next6++; 
+			next6 %= imgs6.length; 
+		}	
+
+		function hideMenu() {
+		alert("본 사진들은 저작권 문제로 인해 다운로드가 불가능합니다.");
+		return false;
+		}
+		document.oncontextmenu=hideMenu;
+
+		var span = document.getElementById("alerts");
+		var timerID = setInterval("doRotate()", 200); // 200밀리초 주기로 doRotate() 호출
+
+		alerts.onclick = function (e) { // 마우스 클릭 이벤트 리스너
+		clearInterval(timerID); // 타이머 해제. 문자열 회전 중단
+	}
+
+	function doRotate() {
+		var str = alerts.innerHTML;
+		var firstChar = str.substr(0, 1);
+		var remains = str.substr(1, str.length-1);
+		str = remains + firstChar;
+		alerts.innerHTML = str; // str 텍스트를 span 객체에 출력
+	}	
+	function checkFilled(obj) {
+		if(obj.value == "") {
+			alert("정보를 입력해주세요");
+			obj.focus(); // obj에 다시 포커스
+		}
+	}
+	function load() {
+	var select = document.getElementById("site");
+	window.location=select.options[select.selectedIndex].value;
+}
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class= 'intro' style="background-color: #263343;">
+				<div class='header'>
+					<div class="search">
+						<form>
+							<input type="search" placeholder="search">	
+							<input type="submit" value="검색">
+						</form>
+						
+					</div>
+					<ul class="nav">
+						<li><a href='https://www.jejusi.go.kr/tour.do' target="_blank">제주도</a></li>
+						<li><a href='https://www.gangwon.to/gwtour' target="_blank">강원도</a></li>
+						<li><a href='https://www.gyeongnam.go.kr/index.gyeong?menuCd=DOM_000000113000000000' target="_blank">경상도</a></li>
+						<li><a href='https://gto.or.kr/' target="_blank">경기도</a></li>
+						<li><a href='https://www.namdokorea.com/tour/info/area/areaList.do?menuCd=T002001001&area=AREA_MOKPO'  target="_blank">전라도</a></li>
+						<li><a href='https://tour.chungbuk.go.kr/www/index.do' target="_blank">충청도</a></li>
+					</ul>
+				</div><br>
+
+			</div>
+			<div>
+			<img src="C:\web\img\어린왕자 완성본1.jpg" height="650" width="1439.5">
+			<p class="write">Will You Travel With Me?</p>
+			<button class="go" style="font-family: 'Hi Melody';"><a href='#survey'>신청서 작성</a></button>
+			</div><br><br><Br><br>
+		<center >
+			<div>
+			<img src="C:\web\img\남한 지도.jpg" height="700" width="700">
+			<span class="pin" style="top: 126%; left: 52%;"></span>
+			<span style="font-size: 30px; top: 131% ;left: 52%; position: absolute;">강원도</span>
+			<img id='kangwon' style="border:4px ridge lightcoral" src="C:\web\img\강원도3.jpeg" alt="." width="150" height="150" onclick="change(this)">
+			<span class="pin" style="top: 155%; left: 56%;"></span>
+			<span style="font-size: 30px; top: 160% ;left: 55%; position: absolute;">경상도</span>
+			<img id='kungsang' style="border:4px ridge lightcoral" src="C:\web\img\경상도2.jpeg" alt="." width="150" height="150" onclick="change2(this)">
+			<span class="pin" style="top: 202%; left: 42%;"></span>
+			<span style="font-size: 30px; top: 206.5% ;left: 41.5%; position: absolute;">제주도</span>	
+			<img id='jeju' style="border:4px ridge lightcoral" src="C:\web\img\제주도1.jpeg" alt="." width="150" height="150" onclick="change3(this)">
+			<span class="pin" style="top: 180%; left: 42%;"></span>		
+			<span style="font-size: 30px; top: 185% ;left: 41.5%; position: absolute;">전라도</span>
+			<img id='junla' style="border:4px ridge lightcoral" src="C:\web\img\전라도1.jpeg" alt="." width="150" height="150" onclick="change4(this)">	
+			<span class="pin" style="top: 155%; left: 42%;"></span>	
+			<span style="font-size: 30px; top: 160% ;left: 41.5%; position: absolute;">충청도</span>
+			<img id='chungcung' style="border:4px ridge lightcoral" src="C:\web\img\충청도1.jpeg" alt="." width="150" height="150" onclick="change5(this)">	
+			<span class="pin" style="top: 132%; left: 44%;"></span>
+			<span style="font-size: 30px; top: 137% ;left: 44%; position: absolute;">경기도</span>
+			<img id='kunggi' style="border:4px ridge lightcoral" src="C:\web\img\경기도1.jpeg" alt="." width="150" height="150" onclick="change6(this)">	
+			</div>
+
+		<br><br><br><br>
+		<hr>
+		<div  style="background-color: #fffcc7;">
+		<p id=alerts style="font-size: 30px; text-decoration: underline; background-color: #ffed63; ">*본 신청서는 covid 상황에 따라 달라질 수 있음을 알려드립니다.</p>
+		<br><br><br>
+		<h1 style="font-size: 50px; font-family: 'Hi Melody'; " >[여행 신청서 작성]</h1><br><br><br>
+		</center>
+		<div >	
+			<form id="survey">
+				<span style="color: tomato; font-size: 35px;">이름: </span>
+				<input id='name' onblur="checkFilled(this)" type="text" placeholder="홍길동" style="font-size: 20px; font-family: 'Hi Melody';"><br><br>
+				<span style="color: tomato; font-size: 35px;">전화 번호 : </span>
+				<input id='name' type="tel" placeholder="010부터 작성하세요." style="font-size: 20px; font-family: 'Hi Melody';"><br><br>
+				<span style="color: tomato; font-size: 35px;">확인 비밀번호: </span>
+				<input id='name' type="password" style="font-size: 20px;"><br><br>
+				<span style="color: tomato; font-size: 35px;">원하는 여행지:</span> <input type="radio" name="city" value="제주도">제주도
+				<input type="radio" name="city" value="강원도">강원도
+				<input type="radio" name="city" value="경상도">경상도
+				<input type="radio" name="city" value="수도권">수도권
+				<input type="radio" name="city" value="전라도">전라도
+				<input type="radio" name="city" value="충청도">충청도<br><br>
+				<span style="color: tomato; font-size: 35px;" >체류 기간 : </span>
+				<input type="checkbox" name="stay" value="5일">5일
+				<input type="checkbox" name="stay" value="7일">7일
+				<input type="checkbox" name="stay" value="10일">10일
+				<input type="checkbox" name="stay" value="15일">15일
+				<input type="checkbox" name="stay" value="30일">30일<br><br>
+				<span style="color: tomato;font-size: 35px;">여행지 선택 이유 : </span><br>
+				<textarea name="reason" id="reason" cols="50" rows="5"></textarea>
+				<br>
+
+			</form>
+		</div><br><br><br><br><br><br>
+		<center>
+		<div  style="background-color: #fffcc7;">
+		<p style="font-weight: bold; font-size: 25px; color: black; background-color: #ffed63;">추첨을 통해 총 5 분에게만 여행 이용권을 드립니다. 당첨 시 추가 할 옵션을 선택해주세요.</p><br><br>
+		<form class="extra">
+			<input type="checkbox" name="roomservice" value="50000"
+				onclick="calc(this)">룸서비스 <span style="color: tomato;">50,000원</span><br>
+			<input type="checkbox" name="activity" value="30000"
+				onclick="calc(this)">액티비티 이용권<span style="color: tomato;"> 30,000원</span><br>
+			<input type="checkbox" name="공항 라운지 " value="10000"
+				onclick="calc(this)">공항 라운지 <span style="color: tomato;">10,000원</span><br><br>
+			추가 금액 <input type="text" id="sumtext" value="0" style="font-size: 20px; font-family:'Hi Melody' ;"><br><br>
+			<br><input type="submit" value=" submit " id="submit" onclick="sent()">
+		</form>
+	</div>
+		 <hr><br><br>
+		<select id=site>
+			<option value='https://kto.visitkorea.or.kr/kor.kto'> 한국 관광 공사 </option>
+			<option value='https://www.mcst.go.kr/kor/s_culture/festival/festivalList.jsp'> 문화체육관광부 </option>
+			<option value='https://www.yanolja.com/'>야놀자</option>
+			<option value='https://www.goodchoice.kr/?NaPm=ct%3Dkx23hwfb%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D39ae3496c67c1e7a2eb292ea16b6de543fee985b'>여기어때</option>
+			<option value='http://tour.interpark.com/'>인터파크투어</option>
+		</select><br><br>
+			<span><a href="https://kto.visitkorea.or.kr/kor.kto"><img src="./img/한국관광공사.jpg" alt="." height="70" width="150" ></a></span>
+			<span><a href="https://www.mcst.go.kr/kor/s_culture/festival/festivalList.jsp"><img src='./img/문화체육관광부.jpg' alt="." height="70" width="150"></a></span>
+			<span><a href="https://www.yanolja.com/"><img src="./img/야놀자.jpg" alt="." height="70" width="150" ></a></span>
+			<span><a href="https://www.goodchoice.kr/?NaPm=ct%3Dkx23hwfb%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D39ae3496c67c1e7a2eb292ea16b6de543fee985b"><img src='./img/여기어때.jpg' alt="." height="70" width="150"></a></span>
+			<span><a href="http://tour.interpark.com/"><img src='./img/인터파크투어.jpg' alt="." height="70" width="150"></a></span>
+			
+			<br>
+		<button onclick="load()" id="web">웹 사이트 접속</button><br><br><br>
+
+		</center>	
+
+
+		
+		<footer class='footer'>
+			<div>
+				<span><img src="./img/home.png" height="20" width="20"> </span>
+				<span><a href="https://www.hufs.ac.kr/" target="_blank">Home</a></span>
+			</div>
+			<div>
+				<span><img src="./img/home.png" height="20" width="20"> </span>
+				<span id="address" onclick="changes()" style="color: white;">Address</span>
+			</div>
+			<div>
+				<span><img src="./img/kakao-talk.png" height="20" width="20"> </span>
+				<span><a href="https://open.kakao.com/o/sstAziMd"  target="_blank">KakaoTalk Chat</a></span>
+			</div>
+			<div>
+				<span><img src="./img/instagram.png" height="20" width="20" > </span>
+				<span><a href="https://www.instagram.com/gratia_kim__/"  target="_blank">Instagram DM</a></span>
+			</div>
+			<br>
+			<p style="font-size: 20px;"> copyright © GratiaKims' 2021</p>
+		</footer>	
+
+
+
+	</body>
+</html>

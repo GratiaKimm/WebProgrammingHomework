@@ -1,0 +1,201 @@
+*{
+  font-family: 'Nanum Pen Script', cursive; ;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  margin: 0px;
+  padding: 0px;
+  color: black;
+  background-position: center;
+  background-repeat: none;
+  background-size: contain;
+  
+}
+
+body{
+  margin: auto;
+}
+
+
+.header{
+  display: flex;
+  margin: auto;
+  width: 1280px;
+  height:  48px;
+
+}
+
+.search{
+  width: 500px;
+  height: 80px;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-left: -50px;
+}
+.nav{
+  display: flex;
+  width: 900px;
+  justify-content: flex-end;
+  margin-right: 5px;
+  margin-top: 30px;
+  font-size: 25px;
+
+}
+a:hover{
+  color: gray;
+}
+
+.nav >li {
+  margin-left: 70px;
+  display: inline-block;
+}
+
+a{
+  color: white;
+}
+
+.footer{
+  position: sticky;
+  text-align: center;
+  padding: 10px;
+  background-color: #263343;
+  font-size: 20px;
+  justify-content: center;
+
+}
+
+#reason{
+overflow: scroll;
+font-size: 25px;
+font-family: 'Montserrat', sans-serif;
+}
+#survey{
+font-size: 25px;
+font-family: Hi Melody;
+position: relative;
+left: 40px;
+}
+
+.write{
+  font-size: 3.5rem;
+  font-weight: 450;
+  letter-spacing: 6px;
+  padding:0rem 3rem;
+  text-align: center;
+  opacity:0;
+  border-radius: 5px;
+  width: 50%;
+  padding: 1rem;
+  grid-gap: 0.2rem;
+  color: white;
+  position: absolute;
+  top:60%;
+  left:75%;
+  transform:translate(-50%, -50%);
+  animation:lightson .5s ease 10 forwards;
+}
+@keyframes lightson{
+  0%{
+    opacity:0;
+    text-shadow: 0px 0px 0px #fffcc7, 0px 0px 0px #fffcc7, 0px 0px 0px #fffcc7;
+  }
+  20%{
+    opacity:0.5;
+    text-shadow: 0px 0px 2.5px #fffcc7, 0px 0px 5px #fffcc7, 1px 1px 25px #fffcc7;
+  }
+  40%{
+    opacity:0;
+    text-shadow: 0px 0px 1px #fffcc7, 0px 0px 2px #fffcc7, 0px 0px 10px #fffcc7;
+  }
+  50%{
+    opacity:1;
+    text-shadow: 0px 0px 5px #fffcc7, 0px 0px 10px #fffcc7, 1px 1px 50px #fffcc7;
+  }
+  100%{
+    opacity:1;
+    text-shadow: 0px 0px 5px #fffcc7, 0px 0px 10px #fffcc7, 1px 1px 50px #fffcc7;
+  }
+}
+
+#survey{
+  font-size: 35px;
+}
+
+#submit{
+font-size: 25px;
+background-color: lightcoral;
+border: none;
+position: relative;
+color: white;
+}
+
+.go{
+  width: 230px;
+  height: 50px;
+  background-color: lightcoral;
+  color: white;
+  position: absolute;
+  top:77%;
+  left:67%;
+  font-size: 30px;
+  border: none;
+  border-radius: 20px;
+}
+
+.extra{
+  font-size: 30px;
+  
+}
+
+#site{
+  font-size: 20px;
+  font-family:'Hi Melody';
+}
+
+#web{
+  font-size: 20px;
+  font-family:'Hi Melody';
+  border: none;
+  background-color:lightcoral ;
+  color: white;
+}
+
+.pin{
+
+  width :30px;
+  height :30px;
+  border-radius :50% 50% 50% 0;
+  background: lightcoral;
+  position: absolute;
+  transform :rotate(-45deg);
+}
+
+#kangwon{
+  position: absolute;
+  right: 300px; top: 800px;
+}
+
+#kungsang{
+  position: absolute;
+  right: 300px; top: 1100px;
+}
+
+#jeju{
+  position: absolute;
+  right: 500px; top: 1350px; 
+}
+
+#junla{
+  position: absolute;
+  left: 300px; top: 1200px;   
+}
+
+#chungcung{
+  position: absolute;
+  left: 200px; top: 1000px;    
+}
+
+#kunggi{
+  position: absolute;
+  left: 300px; top: 800px;    
+} 
